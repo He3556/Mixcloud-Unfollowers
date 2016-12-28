@@ -1,13 +1,12 @@
 /* (GNU GENERAL PUBLIC LICENSE)
-developed by He3556 https://github.com/He3556
-[dm-development.de] 2014 - published 2016
 
- * LICENSE: https://github.com/He3556/mixcloud_unfollower/blob/master/license
-
+developed by dm-development.de 2014 - published 2016
+ * LICENSE: https://github.com/He3556/Mixcloud-Unfollowers/blob/master/LICENSE
+ * SOURCE: https://github.com/He3556
 The above copyright notice and this permission notice shall be included in all copies
 or substantial portions of the Software.
-(GNU GENERAL PUBLIC LICENSE) -->
 */
+
 
 
 var follers = new Array(); // Array of followers
