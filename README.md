@@ -8,6 +8,6 @@ They might do it for a better quota - have more followers than following others 
 
 ## long-term development: How to indentify bots on Mixcloud? 
 
-### This project uses the jQuery mobile framework 
+### jQuery mobile framework 
 The view is not really optimized for small displays but you can use it on a smartphone. 
 
