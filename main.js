@@ -14,9 +14,9 @@ var ing = 0; // Array pointer - username to check
 var j = 0; // counter
 var followercnt = 0; // Counter of (your) followers
 var followingcnt = 0; // Counter (DJs you are) following
-var cnt = 0;
-var offst = 0;
-var lmt = 100; // limit of 100
+var cnt = 0;  //counter
+var offst = 0; // for paging of content 
+var lmt = 100; //  limit 100 for 1 page 
 var follok = 0; //number of followers that are following back
 var follnot = 0; //number of followers that are NOT following back
 
