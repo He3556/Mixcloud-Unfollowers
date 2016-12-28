@@ -1,0 +1,91 @@
+<!-- (GNU GENERAL PUBLIC LICENSE)
+developed by He3556 https://github.com/He3556
+[dm-development.de] 2014 - published 2016
+
+ * LICENSE: https://github.com/He3556/mixcloud_unfollower/blob/master/license
+
+The above copyright notice and this permission notice shall be included in all copies
+or substantial portions of the Software.
+(GNU GENERAL PUBLIC LICENSE) -->
+
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+		<link rel="stylesheet" type="text/css" href="./script/main.css" />
+		<link rel="stylesheet" type="text/css" href="./script/mixcloud.min.css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	  <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+    <script src="main.js" type="text/javascript"></script>
+    <title>Mixcloud - find notfollowers and unfollowers</title>
+</head>
+<body>
+
+
+<!-- xxxxxxxxxxxx PAGE 1 xxxxxxxxxxxxx -->
+
+<div data-role="page" id="one" data-theme="b" data-content-theme="b">
+    <div data-role="header">
+        <div id="logo"><img src="./pictures/logo.png" alt="Mixcloud" /></div>
+        <div id="logo"><h1>Who is not following you back on Mixcloud?</h1></div>
+        <div id="loader" style="visibility: hidden;"></div>
+    </div>
+
+    <div role="main" class="ui-content">
+       <div id="mid" style="height: 290px;">
+           <div class="ui-body ui-body-b ui-corner-all">
+        <form id="submit">
+          <p>  <label for="searchtext"><p>Enter your username (not DJ name*):</p></label></p>
+		    <p> <input type="search" id="searchtext" name="searchtext" data-icon="search" size=40 value="" /></p>
+            <a href="#two" class="ui-btn ui-corner-all" type="submit" data-role="button" id="input" data-transition="flow">push it real good!</a>
+        </form>
+       </div> </div>
+      <br /><br />
+
+    </div>
+
+    <div data-role="footer"><div id="mid" style="height: 70px"><p>NOTE: You find your username in the URL, when you are on your profile page: www.mixcloud.com/username/)</p></div></div>
+</div>
+
+
+<!-- xxxxxxxxxxxx PAGE 2 xxxxxxxxxxxxxx -->
+
+<div data-role="page" id="two" data-theme="a" data-content-theme="a">
+    <div data-role="header">
+        <a rel="external" href="http://www.mixcloud.music-non-stop.de" id="goback" data-role="button" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-arrow-l" data-transition="flow">back</a>
+          <span class="ui-title"></span>
+        <div id="logo"><img src="./pictures/logo.png" alt="Mixcloud" /></div>
+        <div id="loader" style="visibility: hidden;"></div>
+</div>
+
+<div role="main" class="ui-content">
+
+<!-- Results -->
+    <br />
+        <div id="error"></div>  <!-- output if name was not found -->
+        <br />
+        <div id="mid" >
+           <div class="ui-body ui-body-a ui-corner-all left" style="min-width: 120px; height: 60px">Data from Mixcloud:<div id="info"></div></div>
+            <div style="width: 3%"></div>
+           <div class="ui-body ui-body-a ui-corner-all right" style="min-width: 120px; height: 60px">Data calculated:<br /><div id="cntfollowers"></div><br /><div id="cntfollowing"></div></div>
+            <div style="width: 3%"></div>
+             </div>
+    <div style="clear: both; height: 35px"></div>
+		     <div class="ui-body ui-body-a ui-corner-all">
+		      <div id="fnot" class="left"></div>
+					<div id="fok" class="right"></div>
+	        </div>
+          <div class="ui-body ui-body-a ui-corner-all">
+					<div id="followingmiss" class="left"></div>
+          <div id="followingok" class="right"></div>
+		    	</div>
+    <br /><br />
+    <div id="followers"></div>
+</div><div data-role="footer"> <div id="mid" style="height: 70px"><p>Mixcloud find notfollowers and unfollowers</p></div></div>
+</div>
+
+</body>
+</html>

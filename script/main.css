@@ -1,0 +1,170 @@
+body {
+  /*color: #eee; background-color: #666;*/
+}
+
+h1 {
+  font-size: 22pt !important;
+  text-shadow: none !important;
+   outline: none !important;
+}
+h2 {
+  font-size: 19pt !important;
+  text-shadow: none !important;
+   outline: none !important;
+}
+
+p {
+  font-size: 12pt;
+  text-shadow: none !important;
+  outline: none !important;
+}
+p .small{
+  font-size: 9pt;
+  text-shadow: none !important;
+  outline: none !important;
+}
+
+
+
+.ui-bar-a, .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit {
+    background: #2c2c2c none repeat scroll 0 0 !important;
+}
+
+
+
+div#mid {
+
+
+  /* Internet Explorer 10 */
+display:-ms-flexbox;
+-ms-flex-pack:center;
+-ms-flex-align:center;
+
+/* Firefox */
+display:-moz-box;
+-moz-box-pack:center;
+-moz-box-align:center;
+
+/* Safari, Opera, and Chrome */
+display:-webkit-box;
+-webkit-box-pack:center;
+-webkit-box-align:center;
+
+/* W3C */
+display:box;
+box-pack:center;
+box-align:center;
+}
+
+
+div .left {
+    float: left;
+    width: 40%;
+    vertical-align: text-top;
+
+}
+
+div .right {
+    float: right;
+      width: 40%;
+
+}
+
+
+div#logo {
+     /* Internet Explorer 10 */
+display:-ms-flexbox;
+-ms-flex-pack:center;
+-ms-flex-align:center;
+
+/* Firefox */
+display:-moz-box;
+-moz-box-pack:center;
+-moz-box-align:center;
+
+/* Safari, Opera, and Chrome */
+display:-webkit-box;
+-webkit-box-pack:center;
+-webkit-box-align:center;
+
+/* W3C */
+display:box;
+box-pack:center;
+box-align:center;
+
+  color: #65a7dc;
+  height: 80px;
+
+}
+
+
+div#info {
+
+    font-size: 90%;
+    outline: none;
+    color: #808080;
+}
+
+div#cntfollowers {
+  float: left;
+    font-size: 90%;
+    outline: none;
+    color: #808080;
+}
+
+div#cntfollowing {
+  float: left;
+    font-size: 90%;
+    outline: none;
+    color: #808080;
+}
+div#fok {
+    font-size: 100%;
+    outline: none;
+    color: #1eb544;
+    font-weight: bold;
+}
+div#followingmiss {
+
+    font-size: 80%;
+    outline: none;
+    color: #f0305d;
+}
+div#fnot {
+    font-size: 100%;
+    outline: none;
+    color: #f0305d;
+    font-weight: bold;
+}
+
+div#error {
+
+    display:-ms-flexbox;
+-ms-flex-pack:center;
+-ms-flex-align:center;
+
+/* Firefox */
+display:-moz-box;
+-moz-box-pack:center;
+-moz-box-align:center;
+
+/* Safari, Opera, and Chrome */
+display:-webkit-box;
+-webkit-box-pack:center;
+-webkit-box-align:center;
+
+/* W3C */
+display:box;
+box-pack:center;
+box-align:center;
+    font-size: 120%;
+    outline: none;
+    color: #f00;
+}
+
+div#followingok {
+
+    font-size: 80%;
+    outline: none;
+    color: #1eb544;
+}
