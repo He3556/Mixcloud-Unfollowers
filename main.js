@@ -55,7 +55,7 @@ $('#input').click(function () {
 $.getJSON('http://api.mixcloud.com/' + uname + '/?metadata=1', function (result) {
 
             // +++++ Get metadata from Mixloud
-            tfo = (result.follower_count);
+            var tfo = (result.follower_count);
             followercnt = parseInt(tfo);
             followingcnt = (result.following_count);
 
@@ -124,7 +124,7 @@ function getfollowing(cntb, uname) {
 
                 for (var r = 0; r < 100; r++) {
                     ing = result.data[r].username;
-                    realname = result.data[r].name;
+                    var realname = result.data[r].name;
                     w++;
                     $("#cntfollowing").text(' Following:' + w + '');
   // console.log("c." + w + " = " +  offstb  + " - " + r + " - " + followingcnt + "");
