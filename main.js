@@ -1,6 +1,6 @@
 /* (GNU GENERAL PUBLIC LICENSE)
 
-developed by dm-development.de 2014 - published 2016
+developed by dm-development.de 2014 - published 2017
  * LICENSE: https://github.com/He3556/Mixcloud-Unfollowers/blob/master/LICENSE
  * SOURCE: https://github.com/He3556
 The above copyright notice and this permission notice shall be included in all copies
