@@ -1,5 +1,5 @@
 
-### This tool compares 2 lists: 
+#### This tool compares 2 lists: 
 1. your followers 
 2. people you follow 
 
