@@ -15,6 +15,6 @@ They might do it for a better quota - have more followers than following others 
 The view is not really optimized for small displays but you can use it on a smartphone. 
 
 ----
-### More information (German) and a link to a demonstration (Demo)...
-[dm-development] https://dm-development.de/mixcloud-api/
+#### More information (german language ) and a link to a demonstration (working demo)...
+[dm-development] (https://dm-development.de/mixcloud-api/)
 
