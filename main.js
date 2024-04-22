@@ -51,7 +51,7 @@ $('#input').click(function () {
 
 
 // Get the JSON object - with number of followers and number of following +++++++++++++++++++++++++
-$.getJSON('http://api.mixcloud.com/' + uname + '/?metadata=1', function (result) {
+$.getJSON('https://api.mixcloud.com/' + uname + '/?metadata=1', function (result) {
 
             // +++++ Get metadata from Mixloud
             var tfo = (result.follower_count);
@@ -88,7 +88,7 @@ getfollowing(cntb, uname);
 function getfolls(cnt, uname) {
 
                   for (var i = 0; i < cnt; i++) {
-                          $.getJSON('http://api.mixcloud.com/' + uname + '/followers/?limit=' + lmt + '&offset=' + offst + '', function (result) {
+                          $.getJSON('https://api.mixcloud.com/' + uname + '/followers/?limit=' + lmt + '&offset=' + offst + '', function (result) {
                                   // +++++ Get 100 packs of followers in the array
                                   for (var r = 0; r < 100; r++) {
                                      var temp = (result.data[r].username);
@@ -110,7 +110,7 @@ function getfollowing(cntb, uname) {
 
         for (var i = 0; i < cntb; i++) {
 
-              $.getJSON('http://api.mixcloud.com/' + uname + '/following/?limit=' + lmtb + '&offset=' + offstb + '', function (result) {
+              $.getJSON('https://api.mixcloud.com/' + uname + '/following/?limit=' + lmtb + '&offset=' + offstb + '', function (result) {
 
                 for (var r = 0; r < 100; r++) {
                     ing = result.data[r].username;
@@ -121,11 +121,11 @@ function getfollowing(cntb, uname) {
                     if (tr != -1) {
                          follok = follok + 1;
                          $("#fok").html('<div>' + follok + ' </div>');
-                         $("#followingok").append('<div><img src="./pictures/ok.png" height="12" width="12"> ' + ing + ' <a target=\'_blank\' href=\'http://mixcloud.com/' + ing + '\'>open profile</a></div>');
+                         $("#followingok").append('<div><img src="./pictures/ok.png" height="12" width="12"> ' + ing + ' <a target=\'_blank\' href=\'https://mixcloud.com/' + ing + '\'>open profile</a></div>');
                     } else {
                         follnot = follnot + 1;
                         $("#fnot").html('<div>' + follnot + ' </div>');
-                        $("#followingmiss").append('<div><img src="./pictures/missing.png" height="12" width="12"> ' + ing + ' <a target=\'_blank\' href=\'http://mixcloud.com/' + ing + '\'>open profile</a></div>');
+                        $("#followingmiss").append('<div><img src="./pictures/missing.png" height="12" width="12"> ' + ing + ' <a target=\'_blank\' href=\'https://mixcloud.com/' + ing + '\'>open profile</a></div>');
                     }
                 }
               });
