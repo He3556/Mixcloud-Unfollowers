@@ -18,8 +18,8 @@ followingcnt; // Counter (DJs you are) following
 cnt;  //counter
 offst = 0; // for paging of content
 lmt = 100; //  limit 100 for 1 page
-follok = 0; //number of followers that are following back (green)
-follnot = 0; //number of followers that are NOT following back (green)
+var follok = 0; //number of followers that are following back (green)
+var follnot = 0; //number of followers that are NOT following back (green)
 */
 
 $(document).ready(function () {
@@ -52,7 +52,7 @@ $(document).ready(function () {
         try {
             const result = await $.getJSON(`https://api.mixcloud.com/${uname}/?metadata=1`);
             followercnt = parseInt(result.follower_count);
-            followingcnt = result.following_count;
+            followingcnt = parseInt(result.following_count);
 
             $("#info").append(`Followers: ${followercnt} <br />Following: ${followingcnt}`);
 
@@ -67,8 +67,23 @@ $(document).ready(function () {
             const followers = await getFollowers(cnt, uname);
             await getFollowing(cntb, uname, followers);
 
+            // Kontrolle, ob alle Entitäten verarbeitet wurden
+            if (followers.length === followercnt) {
+                console.log('Alle Follower wurden erfolgreich verarbeitet.');
+            } else {    
+                console.log(`Es wurden nicht alle Follower verarbeitet. Erwartet: ${followercnt}, Verarbeitet: ${followers.length}`);
+            }
+
+            const totalFollowingProcessed = follok + follnot;
+            if (totalFollowingProcessed === followingcnt) {
+                console.log('Alle gefolgten Benutzer wurden erfolgreich verarbeitet.');
+            } else {
+                console.log(`Es wurden nicht alle gefolgten Benutzer verarbeitet. Erwartet: ${followingcnt}, Verarbeitet: ${totalFollowingProcessed}`);
+            }
+            
         } catch (error) {
-            $("#error").append('An error occurred while fetching data.<br />');
+            $("#error").append(`An error occurred while fetching data: ${error.message}<br />`);
+            console.error('Error fetching data:', error);
         }
     });
 
@@ -79,14 +94,14 @@ $(document).ready(function () {
             result.data.forEach(follower => {
                 followers.push(follower.username);
             });
-            $("#cntfollowers").text(`>Followers: ${followers.length}`);
+            $("#cntfollowers").text(`Followers: ${followers.length}`);
         }
         return followers;
     }
 
     async function getFollowing(cntb, uname, followers) {
-        let follok = 0;
-        let follnot = 0;
+        follok = 0;
+        follnot = 0;
 
         $("#followingok").empty();
         $("#followingmiss").empty();
