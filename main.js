@@ -69,16 +69,16 @@ $(document).ready(function () {
 
             // Kontrolle, ob alle Entitäten verarbeitet wurden
             if (followers.length === followercnt) {
-                console.log('Alle Follower wurden erfolgreich verarbeitet.');
+                console.log('All followers were processed successfully.');
             } else {    
-                console.log(`Es wurden nicht alle Follower verarbeitet. Erwartet: ${followercnt}, Verarbeitet: ${followers.length}`);
+                console.log(`${followercnt}, : ${followers.length}`);
             }
 
             const totalFollowingProcessed = follok + follnot;
             if (totalFollowingProcessed === followingcnt) {
-                console.log('Alle gefolgten Benutzer wurden erfolgreich verarbeitet.');
+                console.log('All followed users were processed successfully.');
             } else {
-                console.log(`Es wurden nicht alle gefolgten Benutzer verarbeitet. Erwartet: ${followingcnt}, Verarbeitet: ${totalFollowingProcessed}`);
+                console.log(`${followingcnt}, : ${totalFollowingProcessed}`);
             }
             
         } catch (error) {
