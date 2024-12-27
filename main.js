@@ -8,6 +8,19 @@ The above copyright notice and this permission notice shall be included in all c
 or substantial portions of the Software.
 */
 
+/* 
+follers = new Array(); // Array of followers
+ing = 0; // Array pointer - username to check
+j; // counter of follower (Frontend: Data Calculated)
+w; // counter of following (Frontend: Data Calculated)
+followercnt; // Counter of (your) followers
+followingcnt; // Counter (DJs you are) following
+cnt;  //counter
+offst = 0; // for paging of content
+lmt = 100; //  limit 100 for 1 page
+follok = 0; //number of followers that are following back (green)
+follnot = 0; //number of followers that are NOT following back (green)
+*/
 
 $(document).ready(function () {
     $("#searchtext").focus(); // Focus on the text input
